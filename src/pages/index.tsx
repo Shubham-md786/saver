@@ -1,3 +1,4 @@
+import BlueButton from "@/components/Buttons/BlueButton";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -5,41 +6,32 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Announcing our next round of funding.{" "}
-            <a href="#" className="font-semibold text-indigo-600">
-              <span className="absolute inset-0" aria-hidden="true" />
-              Read more <span aria-hidden="true">&rarr;</span>
-            </a>
+      <div className="container flex flex-col px-6 py-4 mx-auto space-y-6 md:h-128 md:py-16 md:flex-row md:items-center md:space-x-6">
+        <div className="flex mx-2 flex-col items-center w-full md:flex-row md:w-1/2">
+          <div className="max-w-lg md:mx-12 md:order-2">
+            <h1 className="text-3xl font-medium tracking-wide text-center text-primary md:text-3xl md:text-left">
+              Store and manage everything securely in one place.
+            </h1>
+            <p className="mt-4 text-primary text-center md:text-left">
+              CypherVault provides a premium design and features to help you
+              securely store and access all your digital assets in one place
+            </p>
+            <div className="mt-6">
+              <BlueButton href="#" className="block px-3 py-2 md:inline">
+                Get Started For Free
+              </BlueButton>
+            </div>
           </div>
         </div>
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Data to enrich your online business
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Get started
-            </a>
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Learn more <span aria-hidden="true">→</span>
-            </a>
-          </div>
+
+        <div className="flex items-center justify-center w-full h-96 md:w-1/2">
+          <img
+            className="object-cover w-full h-full max-w-2xl rounded-md"
+            src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
+            alt="apple watch photo"
+          />
         </div>
-      </div> */}
+      </div>
       <Footer />
     </>
   );

@@ -13,6 +13,8 @@ import {
   YouTube as YouTubeIcon,
   Share as SocialMediaIcon,
 } from "@mui/icons-material";
+import BlueButton from "./Buttons/BlueButton";
+import Logo from "./Logo";
 
 interface NavElement {
   name: string;
@@ -31,15 +33,6 @@ const navigation: NavElement[] = [
   { name: "Social Media", href: "/social-media", icon: SocialMediaIcon },
 ];
 
-function Logo() {
-  return (
-    <>
-      <span className="sr-only">SAVER</span>
-      <h1>SAVER</h1>
-    </>
-  );
-}
-
 interface NavLinkComponent {
   children: ReactNode;
   href: string;
@@ -56,9 +49,11 @@ const NavLink: React.FC<NavLinkComponent> = ({
   return (
     <li>
       <a
-        className={`text-sm ${
-          isActive ? "text-blue-600 font-bold" : "text-gray-400"
-        } hover:text-blue-600 hover:font-bold ${className}`}
+        className={`text-sm drop-shadow-sm ${
+          isActive
+            ? "text-active font-bold border-b-2 border-blue-500"
+            : "text-primary font-semibold"
+        } hover:text-active hover:font-bold ${className}`}
         href={href}
       >
         {children}
@@ -76,9 +71,9 @@ const MobileNavLink: React.FC<NavLinkComponent> = ({
   return (
     <li className="mb-1">
       <a
-        className={`p-4 text-sm font-semibold flex gap-3 items-center ${
-          isActive ? "bg-blue-50 text-blue-600" : "text-gray-400"
-        } hover:bg-blue-50 hover:text-blue-600 rounded ${className}`}
+        className={`p-4 text-sm font-semibold flex gap-3 items-center rounded drop-shadow-sm ${
+          isActive ? "bg-blue-50 text-active scale-105" : "text-primary-light"
+        } hover:bg-blue-50 hover:text-active hover:scale-105 ${className}`}
         href={href}
       >
         {children}
@@ -91,14 +86,14 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
+    <header>
+      <nav className="relative px-4 py-4 mb-8 flex justify-between items-center bg-white">
         <a className="text-3xl font-bold leading-none" href="#">
           <Logo />
         </a>
         <div className="lg:hidden">
           <button
-            className="navbar-burger flex items-center text-blue-600 p-1"
+            className="navbar-burger flex items-center text-primary p-1"
             onClick={() => setOpen(true)}
           >
             <MenuIcon fontSize="large" />
@@ -112,14 +107,11 @@ function Navbar() {
           ))}
         </ul>
         <div className="hidden lg:inline-block">
-          <a
-            className="lg:ml-auto lg:mr-3 py-2 px-6 bg-blue-500 text-sm text-white font-bold hover:bg-blue-700 rounded-xl"
-            href="#"
-          >
+          <BlueButton className="lg:ml-auto lg:mr-3" href="#">
             Sign up
-          </a>
+          </BlueButton>
           <a
-            className=" lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 text-sm text-gray-900 font-bold rounded-xl hover:bg-gray-100 relative group"
+            className=" lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 text-sm text-primary font-semibold rounded-md drop-shadow-sm hover:bg-gray-100 relative group"
             href="#"
           >
             Sign In
@@ -132,7 +124,10 @@ function Navbar() {
       </nav>
       {open && (
         <div className="navbar-menu relative z-50">
-          <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+          <div
+            className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
+            onClick={() => setOpen(false)}
+          ></div>
           <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
             <div className="flex items-center mb-8">
               <a className="mr-auto text-3xl font-bold leading-none" href="#">
@@ -163,7 +158,7 @@ function Navbar() {
             <div className="mt-auto">
               <div className="pt-6">
                 <a
-                  className="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-loose bg-gray-50 hover:bg-gray-100 rounded-xl relative group"
+                  className="block px-4 py-3 mb-3 text-sm text-center font-semibold leading-loose bg-gray-50 drop-shadow-sm hover:bg-gray-100 rounded-md relative group"
                   href="#"
                 >
                   Sign in
@@ -172,21 +167,18 @@ function Navbar() {
                     className="ml-1 transition-transform duration-300 transform-gpu group-hover:translate-x-3"
                   />
                 </a>
-                <a
-                  className="block py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-xl"
-                  href="#"
-                >
+                <BlueButton className="block py-3 mb-2 text-center" href="#">
                   Sign Up
-                </a>
+                </BlueButton>
               </div>
-              <p className="my-4 text-xs text-center text-gray-400">
-                <span>Copyright © 2021</span>
+              <p className="my-4 text-xs text-center text-primary-light">
+                <span>© 2023 CypherVault, Inc. All rights reserved.</span>
               </p>
             </div>
           </nav>
         </div>
       )}
-    </>
+    </header>
   );
 }
 
