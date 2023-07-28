@@ -9,13 +9,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        active: "#3b82f6", // blue-500
+        active: "#2563eb", // blue-600
+        "active-dark": "#1d4ed8", // blue-700
+        "active-light": "#1d4ed8", // blue-500
         primary: "#334155", //slate-700
         "primary-light": "#64748b", //slate-500
+        "primary-dark": "#1e293b", //slate-800
         secondary: "#ffffff", // white
       },
       backgroundColor: {
         "button-primary": "#3b82f6", // blue-500
+        "button-primary-dark": "#1d4ed8", // blue-700
         "button-primary-hover": "#2563eb", // blue-600
       },
       animation: {
