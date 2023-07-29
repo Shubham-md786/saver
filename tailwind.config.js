@@ -38,5 +38,29 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["data-theme=light"],
+          "base-content": "#334155",
+          primary: "#3b82f6",
+          ".btn": {
+            "text-transform": "capitalize",
+          },
+          ".btn-primary": {
+            "text-transform": "capitalize",
+            color: "#fff",
+            "padding-top": "0.5rem",
+            "padding-bottom": "0.5rem",
+            "padding-left": "1.25rem",
+            "padding-right": "1.25rem",
+          },
+        },
+      },
+      "dark",
+    ],
+    logs: false,
+  },
 };

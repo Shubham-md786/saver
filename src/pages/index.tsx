@@ -4,6 +4,8 @@ import {
   IdentificationIcon,
   LockClosedIcon,
   UserIcon,
+  CalendarDaysIcon,
+  HandRaisedIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
@@ -34,12 +36,55 @@ const features = [
   },
 ];
 
+const stats = [
+  {
+    data: "35K",
+    title: "Customers",
+  },
+  {
+    data: "10K+",
+    title: "Downloads",
+  },
+  {
+    data: "40+",
+    title: "Countries",
+  },
+  {
+    data: "30M+",
+    title: "Total revenue",
+  },
+];
+
+const testimonials = [
+  {
+    avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+    name: "Martin escobar",
+    title: "Founder of meta",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.",
+  },
+  {
+    avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+    name: "Angela stian",
+    title: "Product designer",
+    quote:
+      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+  },
+  {
+    avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+    name: "Karim ahmed",
+    title: "DevOp engineer",
+    quote:
+      "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
+  },
+];
+
 export default function Home() {
   return (
     <>
       <main>
-        <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 md:h-128 md:py-12 md:mb-10 md:flex-row md:items-center md:space-x-6">
-          <div className="flex mx-2 flex-col items-center w-full md:flex-row md:w-1/2">
+        <div className="container hero flex flex-col px-6 py-10 mx-auto space-y-6 md:h-128 md:py-12 md:mb-10 md:flex-row md:items-center md:space-x-6">
+          <div className="hero-content mx-2 flex-col w-full md:flex-row md:w-1/2">
             <div className="max-w-lg md:mx-12 md:order-2">
               <h1 className="text-3xl font-bold tracking-wide text-center text-primary md:text-3xl md:text-left">
                 Store and manage everything securely in one place.
@@ -60,14 +105,17 @@ export default function Home() {
             <Image
               className="object-cover w-full h-full max-w-2xl rounded-md"
               width={1}
+              sizes="(max-width: 768px) 100vw"
               height={1}
-              src="/images/1.png"
-              alt="apple watch photo"
+              priority
+              src="/images/2.png"
+              quality={100}
+              alt="Main Image"
             />
           </div>
         </div>
       </main>
-      <div className="bg-white py-8 sm:py-12">
+      <section className="bg-white py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-bold leading-7 text-active-dark">
@@ -103,7 +151,182 @@ export default function Home() {
             </dl>
           </div>
         </div>
-      </div>
+      </section>
+      <section className="py-14">
+        <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              Our customers are always happy
+            </h3>
+            <p className="mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              venenatis sollicitudin quam ut tincidunt.
+            </p>
+          </div>
+          <div className="mt-12">
+            <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x">
+              {stats.map((item, idx) => (
+                <li key={idx} className="text-center px-12 md:px-16">
+                  <h4 className="text-4xl text-indigo-600 font-semibold">
+                    {item.data}
+                  </h4>
+                  <p className="mt-3 font-medium">{item.title}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+            Trusted by the world’s most innovative teams
+          </h2>
+          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+              alt="Transistor"
+              width={158}
+              height={48}
+            />
+            <img
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+              alt="Reform"
+              width={158}
+              height={48}
+            />
+            <img
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+              alt="Tuple"
+              width={158}
+              height={48}
+            />
+            <img
+              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+              alt="SavvyCal"
+              width={158}
+              height={48}
+            />
+            <img
+              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+              alt="Statamic"
+              width={158}
+              height={48}
+            />
+          </div>
+        </div>
+      </section>
+      <section className="py-14">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+          <div className="max-w-xl sm:text-center md:mx-auto">
+            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              See what others saying about us
+            </h3>
+            <p className="mt-3 text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et
+              est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum
+              magna lorem, euismod volutpat arcu volutpat et.
+            </p>
+          </div>
+          <div className="mt-12">
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {testimonials.map((item, idx) => (
+                <li key={idx} className="bg-gray-50 p-4 rounded-xl">
+                  <figure>
+                    <div className="flex items-center gap-x-4">
+                      <img
+                        src={item.avatar}
+                        className="w-16 h-16 rounded-full"
+                      />
+                      <div>
+                        <span className="block text-gray-800 font-semibold">
+                          {item.name}
+                        </span>
+                        <span className="block text-gray-600 text-sm mt-0.5">
+                          {item.title}
+                        </span>
+                      </div>
+                    </div>
+                    <blockquote>
+                      <p className="mt-6 text-gray-700">{item.quote}</p>
+                    </blockquote>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            <div className="max-w-xl lg:max-w-lg">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Subscribe to our newsletter.
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-gray-300">
+                Nostrud amet eu ullamco nisi aute in ad minim nostrud
+                adipisicing velit quis. Duis tempor incididunt dolore.
+              </p>
+              <div className="mt-6 flex max-w-md gap-x-4">
+                <label htmlFor="email-address" className="sr-only">
+                  Email address
+                </label>
+                <input
+                  id="email-address"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                  placeholder="Enter your email"
+                />
+                <button
+                  type="submit"
+                  className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+            <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+              <div className="flex flex-col items-start">
+                <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                  <CalendarDaysIcon
+                    className="h-6 w-6 text-white"
+                    aria-hidden="true"
+                  />
+                </div>
+                <dt className="mt-4 font-semibold text-white">
+                  Weekly articles
+                </dt>
+                <dd className="mt-2 leading-7 text-gray-400">
+                  Non laboris consequat cupidatat laborum magna. Eiusmod non
+                  irure cupidatat duis commodo amet.
+                </dd>
+              </div>
+              <div className="flex flex-col items-start">
+                <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                  <HandRaisedIcon
+                    className="h-6 w-6 text-white"
+                    aria-hidden="true"
+                  />
+                </div>
+                <dt className="mt-4 font-semibold text-white">No spam</dt>
+                <dd className="mt-2 leading-7 text-gray-400">
+                  Officia excepteur ullamco ut sint duis proident non
+                  adipisicing. Voluptate incididunt anim.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
