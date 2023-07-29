@@ -1,10 +1,11 @@
 import BlueButton from "@/components/Buttons/BlueButton";
 import {
-  ArrowPathIcon,
   CloudArrowUpIcon,
-  FingerPrintIcon,
+  IdentificationIcon,
   LockClosedIcon,
+  UserIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const features = [
   {
@@ -23,13 +24,13 @@ const features = [
     name: "Easy Access",
     description:
       "Effortlessly access your data on our user-friendly website. With a simple interface, managing your information is a breeze. Enjoy the convenience of seamless data access and focus on what matters most.",
-    icon: ArrowPathIcon,
+    icon: IdentificationIcon,
   },
   {
-    name: "Advanced security",
+    name: "Personalization",
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-    icon: FingerPrintIcon,
+      "Store and manage your projects, website URLs, images, passwords, IDs, and social media posts securely in one personalized hub. Enjoy seamless organization tailored to your needs with advanced data encryption. Simplify your digital life with us!",
+    icon: UserIcon,
   },
 ];
 
@@ -56,9 +57,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center w-full h-96 md:w-1/2">
-            <img
+            <Image
               className="object-cover w-full h-full max-w-2xl rounded-md"
-              src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
+              width={1}
+              height={1}
+              src="/images/1.png"
               alt="apple watch photo"
             />
           </div>
