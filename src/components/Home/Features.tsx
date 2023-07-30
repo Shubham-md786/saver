@@ -41,7 +41,7 @@ const features = [
 
 function Features() {
   return (
-    <section className="bg-white my-8 sm:py-12">
+    <section className="bg-white my-24">
       {/* <div
         className="absolute inset-0 max-w-xs mx-auto h-auto blur-[118px] "
         style={{

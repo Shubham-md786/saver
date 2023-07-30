@@ -2,7 +2,7 @@ import React from "react";
 
 function Testimonials() {
   return (
-    <section>
+    <section className="bg-white my-24">
       <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="font-semibold leading-7 text-active-dark tracking-wide">
@@ -27,17 +27,21 @@ function Testimonials() {
                 width="220"
                 loading="lazy"
               />
-              <p className="text-gray-600 md:text-xl">
-                <span className="font-serif">&quot;</span> Lorem ipsum dolor sit
+              <p className="text-primary-light md:text-xl">
+                <span className="font-serif">&quot;</span>Lorem ipsum dolor sit
                 amet consectetur adipisicing elit. Quaerat repellat perspiciatis
                 excepturi est. Non ipsum iusto aliquam consequatur repellat
                 provident, omnis ut, sapiente voluptates veritatis cum deleniti
-                repudiandae ad doloribus.{" "}
+                repudiandae ad doloribus.
                 <span className="font-serif">&quot;</span>
               </p>
               <div>
-                <h6 className="text-lg font-semibold leading-none">Jane Doe</h6>
-                <span className="text-xs text-gray-500">Product Designer</span>
+                <h6 className="text-lg text-primary font-semibold leading-none">
+                  Jane Doe
+                </h6>
+                <span className="text-xs text-primary-light">
+                  Product Designer
+                </span>
               </div>
             </div>
           </div>
@@ -52,7 +56,7 @@ function Testimonials() {
               loading="lazy"
             />
             <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-              <p className="text-gray-600">
+              <p className="text-primary-light">
                 <span className="font-serif">&quot;</span> Lorem ipsum dolor sit
                 amet consectetur adipisicing elit. Quaerat repellat perspiciatis
                 excepturi est. Non ipsum iusto aliquam consequatur repellat
@@ -62,8 +66,12 @@ function Testimonials() {
                 <span className="font-serif">&quot;</span>
               </p>
               <div>
-                <h6 className="text-lg font-semibold leading-none">Jane Doe</h6>
-                <span className="text-xs text-gray-500">Product Designer</span>
+                <h6 className="text-lg font-semibold text-primary leading-none">
+                  Jane Doe
+                </h6>
+                <span className="text-xs text-primary-light">
+                  Product Designer
+                </span>
               </div>
             </div>
           </div>
@@ -77,7 +85,7 @@ function Testimonials() {
               loading="lazy"
             />
             <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-              <p className="text-gray-600">
+              <p className="text-primary-light">
                 <span className="font-serif">&quot;</span> Lorem ipsum dolor sit
                 amet consectetur adipisicing elit. Quaerat repellat perspiciatis
                 excepturi est. Non ipsum iusto aliquam consequatur repellat
@@ -88,8 +96,12 @@ function Testimonials() {
                 <span className="font-serif">&quot;</span>
               </p>
               <div>
-                <h6 className="text-lg font-semibold leading-none">Jane Doe</h6>
-                <span className="text-xs text-gray-500">Product Designer</span>
+                <h6 className="text-lg font-semibold text-primary leading-none">
+                  Jane Doe
+                </h6>
+                <span className="text-xs text-primary-light">
+                  Product Designer
+                </span>
               </div>
             </div>
           </div>

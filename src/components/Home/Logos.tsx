@@ -2,7 +2,7 @@ import React from "react";
 
 function Logos() {
   return (
-    <section className="bg-white py-12 sm:py-16">
+    <section className="bg-white my-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="font-semibold leading-7 text-active-dark tracking-wide">

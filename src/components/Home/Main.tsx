@@ -3,7 +3,7 @@ import Image from "next/image";
 function Main() {
   return (
     <section>
-      <div className="container hero flex flex-col px-6 py-10 mx-auto space-y-6 md:h-128 md:py-12 md:mb-10 md:flex-row md:items-center md:space-x-6">
+      <div className="container hero flex flex-col px-6 py-6 mx-auto space-y-6 md:h-128 md:py-12 md:flex-row md:items-center md:space-x-6">
         <div className="hero-content mx-2 flex-col w-full md:flex-row md:w-1/2">
           <div className="max-w-lg md:mx-12 md:order-2">
             <h2 className="font-semibold tracking-wide text-active-dark leading-7 text-center md:text-left">

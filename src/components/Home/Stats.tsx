@@ -21,7 +21,7 @@ const stats = [
 
 function Stats() {
   return (
-    <section className="py-14">
+    <section className="bg-white my-24">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="font-semibold leading-7 text-active-dark tracking-wide">
