@@ -1,59 +1,7 @@
-import BlueButton from "@/components/Buttons/BlueButton";
-import {
-  CloudArrowUpIcon,
-  IdentificationIcon,
-  LockClosedIcon,
-  UserIcon,
-  CalendarDaysIcon,
-  HandRaisedIcon,
-} from "@heroicons/react/24/outline";
-import Image from "next/image";
-
-const features = [
-  {
-    name: "Blazing Fast Speed",
-    description:
-      "Experience blazing fast cloud speeds for effortless file management, project handling, and seamless exploration of our platform's features. Enjoy unparalleled efficiency and reliability with us today!",
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: "Advanced security",
-    description:
-      "Your data's security is our top priority. Our website utilizes advanced encryption and industry-leading protocols to ensure comprehensive protection from unauthorized access.",
-    icon: LockClosedIcon,
-  },
-  {
-    name: "Easy Access",
-    description:
-      "Effortlessly access your data on our user-friendly website. With a simple interface, managing your information is a breeze. Enjoy the convenience of seamless data access and focus on what matters most.",
-    icon: IdentificationIcon,
-  },
-  {
-    name: "Personalization",
-    description:
-      "Store and manage your projects, website URLs, images, passwords, IDs, and social media posts securely in one personalized hub. Enjoy seamless organization tailored to your needs with advanced data encryption. Simplify your digital life with us!",
-    icon: UserIcon,
-  },
-];
-
-const stats = [
-  {
-    data: "35K",
-    title: "Customers",
-  },
-  {
-    data: "10K+",
-    title: "Downloads",
-  },
-  {
-    data: "40+",
-    title: "Countries",
-  },
-  {
-    data: "30M+",
-    title: "Total revenue",
-  },
-];
+import Features from "@/components/Home/Features";
+import Main from "@/components/Home/Main";
+import Stats from "@/components/Home/Stats";
+import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 
 const testimonials = [
   {
@@ -82,101 +30,8 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <main>
-        <div className="container hero flex flex-col px-6 py-10 mx-auto space-y-6 md:h-128 md:py-12 md:mb-10 md:flex-row md:items-center md:space-x-6">
-          <div className="hero-content mx-2 flex-col w-full md:flex-row md:w-1/2">
-            <div className="max-w-lg md:mx-12 md:order-2">
-              <h1 className="text-3xl font-bold tracking-wide text-center text-primary md:text-3xl md:text-left">
-                Store and manage everything securely in one place.
-              </h1>
-              <p className="mt-4 text-primary text-center md:text-left">
-                CypherVault provides a premium design and features to help you
-                securely store and access all your digital assets in one place
-              </p>
-              <div className="mt-6">
-                <BlueButton href="#" className="block px-3 py-2 md:inline">
-                  Get Started For Free
-                </BlueButton>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center w-full h-96 md:w-1/2">
-            <Image
-              className="object-cover w-full h-full max-w-2xl rounded-md"
-              width={1}
-              sizes="(max-width: 768px) 100vw"
-              height={1}
-              priority
-              src="/images/2.png"
-              quality={100}
-              alt="Main Image"
-            />
-          </div>
-        </div>
-      </main>
-      <section className="bg-white py-8 sm:py-12">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-bold leading-7 text-active-dark">
-              Full Security
-            </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-3xl">
-              Everything you need to Store
-            </p>
-            <p className="mt-6 text-lg leading-8 text-primary">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              {features.map((feature) => (
-                <div key={feature.name} className="relative pl-16">
-                  <dt className="text-base leading-7">
-                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-button-primary-dark">
-                      <feature.icon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <p className="text-primary font-semibold">{feature.name}</p>
-                  </dt>
-                  <dd className="mt-2 text-base leading-7 text-primary-light">
-                    {feature.description}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
-      </section>
-      <section className="py-14">
-        <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              Our customers are always happy
-            </h3>
-            <p className="mt-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              venenatis sollicitudin quam ut tincidunt.
-            </p>
-          </div>
-          <div className="mt-12">
-            <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x">
-              {stats.map((item, idx) => (
-                <li key={idx} className="text-center px-12 md:px-16">
-                  <h4 className="text-4xl text-indigo-600 font-semibold">
-                    {item.data}
-                  </h4>
-                  <p className="mt-3 font-medium">{item.title}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+      <Main />
+      <Features />
       <section className="bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
@@ -221,44 +76,101 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-14">
-        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-          <div className="max-w-xl sm:text-center md:mx-auto">
-            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              See what others saying about us
-            </h3>
-            <p className="mt-3 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et
-              est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum
-              magna lorem, euismod volutpat arcu volutpat et.
-            </p>
-          </div>
-          <div className="mt-12">
-            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {testimonials.map((item, idx) => (
-                <li key={idx} className="bg-gray-50 p-4 rounded-xl">
-                  <figure>
-                    <div className="flex items-center gap-x-4">
-                      <img
-                        src={item.avatar}
-                        className="w-16 h-16 rounded-full"
-                      />
-                      <div>
-                        <span className="block text-gray-800 font-semibold">
-                          {item.name}
-                        </span>
-                        <span className="block text-gray-600 text-sm mt-0.5">
-                          {item.title}
-                        </span>
-                      </div>
-                    </div>
-                    <blockquote>
-                      <p className="mt-6 text-gray-700">{item.quote}</p>
-                    </blockquote>
-                  </figure>
-                </li>
-              ))}
-            </ul>
+      <Stats />
+      <section className="py-16 white">
+        <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+          <h2 className="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">
+            What's our customers say
+          </h2>
+          <div className="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
+            <div className="row-span-2 p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
+              <div className="h-full flex flex-col justify-center space-y-4">
+                <img
+                  className="w-20 h-20 mx-auto rounded-full"
+                  src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/second_user.webp"
+                  alt="user avatar"
+                  height="220"
+                  width="220"
+                  loading="lazy"
+                />
+                <p className="text-gray-600 md:text-xl">
+                  {" "}
+                  <span className="font-serif">"</span> Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Quaerat repellat
+                  perspiciatis excepturi est. Non ipsum iusto aliquam
+                  consequatur repellat provident, omnis ut, sapiente voluptates
+                  veritatis cum deleniti repudiandae ad doloribus.{" "}
+                  <span className="font-serif">"</span>
+                </p>
+                <div>
+                  <h6 className="text-lg font-semibold leading-none">
+                    Jane Doe
+                  </h6>
+                  <span className="text-xs text-gray-500">
+                    Product Designer
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
+              <img
+                className="w-20 h-20 mx-auto rounded-full"
+                src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp"
+                alt="user avatar"
+                height="220"
+                width="220"
+                loading="lazy"
+              />
+              <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
+                <p className="text-gray-600">
+                  {" "}
+                  <span className="font-serif">"</span> Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Quaerat repellat
+                  perspiciatis excepturi est. Non ipsum iusto aliquam
+                  consequatur repellat provident, omnis ut, sapiente voluptates
+                  veritatis cum deleniti repudiandae ad doloribus.{" "}
+                  <span className="font-serif">"</span>
+                </p>
+                <div>
+                  <h6 className="text-lg font-semibold leading-none">
+                    Jane Doe
+                  </h6>
+                  <span className="text-xs text-gray-500">
+                    Product Designer
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
+              <img
+                className="w-20 h-20 mx-auto rounded-full"
+                src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp"
+                alt="user avatar"
+                height="220"
+                width="220"
+                loading="lazy"
+              />
+              <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
+                <p className="text-gray-600">
+                  {" "}
+                  <span className="font-serif">"</span> Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Quaerat repellat
+                  perspiciatis excepturi est. Non ipsum iusto aliquam
+                  consequatur repellat provident, omnis ut, sapiente voluptates
+                  veritatis cum deleniti repudiandae ad doloribus.{" "}
+                  <span className="font-serif">"</span>
+                </p>
+                <div>
+                  <h6 className="text-lg font-semibold leading-none">
+                    Jane Doe
+                  </h6>
+                  <span className="text-xs text-gray-500">
+                    Product Designer
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
