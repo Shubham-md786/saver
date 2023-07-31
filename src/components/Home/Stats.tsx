@@ -28,9 +28,9 @@ function Stats() {
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
     venenatis sollicitudin quam ut tincidunt."
     >
-      <ul className="flex items-center justify-center gap-10 sm:flex-row flex-wrap lg:divide-x">
+      <ul className="flex items-center justify-center gap-y-10 flex-row flex-wrap lg:divide-x">
         {stats.map((item, idx) => (
-          <li key={idx} className="text-center px-4">
+          <li key={idx} className="text-center px-9 md:px-16">
             <h4 className="text-4xl text-active font-semibold">{item.data}</h4>
             <p className="font-medium">{item.title}</p>
           </li>

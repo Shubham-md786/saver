@@ -11,7 +11,7 @@ const Section: React.FC<Section> = ({ children, tag, title, description }) => {
   return (
     <section className="my-20 py-4 mx-auto">
       <div>
-        <div className="mx-auto max-w-2xl lg:text-center">
+        <div className="mx-auto max-w-2xl md:text-center">
           <h2 className=" p-1 font-semibold leading-7 text-active-dark tracking-wide">
             {tag}
           </h2>

@@ -73,18 +73,18 @@ function Features() {
     Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
     In mi viverra elit nunc."
     >
-      <div className="mx-auto max-w-2xl lg:max-w-4xl">
+      <div className="mx-auto flex items-center justify-center lg:max-w-4xl">
         <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
           {features.map((feature) => (
             <div
               key={feature.name}
-              className="shadow-lg border rounded-lg p-7 hover:shadow-blue-100"
+              className="shadow-lg border rounded-lg p-7 md:p-9 hover:shadow-blue-100"
             >
               <dt className="text-base leading-7">
                 <div className="mb-1 flex h-10 w-10 items-center justify-center rounded-lg bg-button-primary-dark">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <p className="py-2 text-primary font-semibold">
+                <p className="py-2 md:py-2.5 text-primary font-semibold">
                   {feature.name}
                 </p>
               </dt>

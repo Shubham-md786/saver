@@ -9,7 +9,7 @@ function Testimonials() {
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
       venenatis sollicitudin quam ut tincidunt."
     >
-      <div className="grid gap-8 md:grid-rows-2 lg:grid-cols-2 mt-16">
+      <div className="grid gap-8 md:grid-rows-2 lg:grid-cols-2 mt-16 mx-2 md:mx-5">
         <div className="row-span-2 p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
           <div className="h-full flex flex-col justify-center space-y-4">
             <img
