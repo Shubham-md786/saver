@@ -1,10 +1,9 @@
 import Features from "@/components/Home/Features";
-import Logos from "@/components/Home/Logos";
+import Logos from "@/components/Home/Companys";
 import Main from "@/components/Home/Main";
 import NewsLetter from "@/components/Home/NewsLetter";
 import Stats from "@/components/Home/Stats";
 import Testimonials from "@/components/Home/Testimonials";
-import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 
 const testimonials = [
   {
@@ -38,7 +37,7 @@ export default function Home() {
       <Logos />
       <Stats />
       <Testimonials />
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </>
   );
 }

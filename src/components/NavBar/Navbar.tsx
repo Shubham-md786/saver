@@ -13,9 +13,10 @@ import {
 } from "@mui/icons-material";
 import Logo from "../Logo";
 import NavLink from "./NavLink";
+import { useState } from "react";
 
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon, isActive: true },
+  { name: "Home", href: "/", icon: HomeIcon },
   { name: "Projects", href: "/projects", icon: ProjectIcon },
   { name: "Websites", href: "/websites", icon: WebsiteIcon },
   { name: "Images", href: "/images", icon: ImageIcon },
@@ -25,26 +26,33 @@ const navigation = [
 ];
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header>
       <div className="drawer">
-        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <input
+          type="checkbox"
+          className="drawer-toggle"
+          onChange={() => {}}
+          checked={open}
+        />
         <div className="drawer-content">
           <nav className="navbar fixed py-2 px-5 shadow-sm flex justify-between bg-white lg:mb-8 z-10">
             <a href="#">
               <Logo />
             </a>
             <div className="lg:hidden">
-              <label
-                htmlFor="my-drawer"
+              <span
+                onClick={() => setOpen(true)}
                 className="btn btn-circle btn-ghost text-primary"
               >
                 <MenuIcon />
-              </label>
+              </span>
             </div>
             <ul className="hidden absolute gap-2 top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
               {navigation.map((ele, index) => (
-                <NavLink href={ele.href} key={index} isActive={ele.isActive}>
+                <NavLink href={ele.href} key={index}>
                   {ele.name}
                 </NavLink>
               ))}
@@ -67,23 +75,26 @@ function Navbar() {
           </nav>
         </div>
         <div className="drawer-side z-50 lg:hidden">
-          <label htmlFor="my-drawer" className="drawer-overlay blur"></label>
+          <div
+            onClick={() => setOpen(false)}
+            className="drawer-overlay blur"
+          ></div>
           <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-xs py-2 px-6 bg-white border-r overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <a href="#">
                 <Logo />
               </a>
-              <label
-                htmlFor="my-drawer"
+              <span
+                onClick={() => setOpen(false)}
                 className="btn btn-circle btn-ghost flex items-center text-primary hover:animate-wiggle"
               >
                 <CloseIcon />
-              </label>
+              </span>
             </div>
             <div>
               <ul>
                 {navigation.map((ele, index) => (
-                  <NavLink href={ele.href} key={index} isActive={ele.isActive}>
+                  <NavLink onOpen={setOpen} href={ele.href} key={index}>
                     <>
                       <ele.icon /> {ele.name}
                     </>

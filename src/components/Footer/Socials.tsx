@@ -22,7 +22,7 @@ function Socials() {
       {socialLinks.map((ele, index) => (
         <a
           href={ele.url}
-          className="hover:scale-110"
+          className="btn btn-ghost btn-circle btn-sm hover:scale-110"
           target="_blank"
           rel="noreferrer"
           key={index}

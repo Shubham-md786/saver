@@ -2,10 +2,10 @@ import Image from "next/image";
 
 function Main() {
   return (
-    <section>
-      <div className="container hero flex flex-col px-6 py-6 mx-auto space-y-6 md:h-128 md:py-12 md:flex-row md:items-center md:space-x-6">
-        <div className="hero-content mx-2 flex-col w-full md:flex-row md:w-1/2">
-          <div className="max-w-lg md:mx-12 md:order-2">
+    <section id="main" className="">
+      <div className="container hero  flex flex-col md:flex-row md:items-center space-y-6">
+        <div className="hero-content flex-col w-full md:flex-row md:w-1/2">
+          <div className="max-w-lg md:order-2">
             <h2 className="font-semibold tracking-wide text-active-dark leading-7 text-center md:text-left">
               Cloud Storage
             </h2>
@@ -16,10 +16,10 @@ function Main() {
               CypherVault provides a premium design and features to help you
               securely store and access all your digital assets in one place
             </p>
-            <div className="mt-6">
+            <div className="mt-6 px-4">
               <a
                 href="#"
-                className="btn btn-primary flex items-center px-3 py-2 md:inline"
+                className="btn btn-primary flex items-center md:btn-wide"
               >
                 Get Started For Free
               </a>

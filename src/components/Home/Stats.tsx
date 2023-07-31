@@ -1,4 +1,5 @@
 import React from "react";
+import Section from "./Section";
 
 const stats = [
   {
@@ -21,34 +22,21 @@ const stats = [
 
 function Stats() {
   return (
-    <section className="bg-white my-24">
-      <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="font-semibold leading-7 text-active-dark tracking-wide">
-            Statistics
-          </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-primary">
-            Our customers are always happy
-          </p>
-          <p className="mt-6 text-lg leading-8 text-primary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            venenatis sollicitudin quam ut tincidunt.
-          </p>
-        </div>
-        <div className="mt-16">
-          <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x">
-            {stats.map((item, idx) => (
-              <li key={idx} className="text-center px-12 md:px-16">
-                <h4 className="text-4xl text-active font-semibold">
-                  {item.data}
-                </h4>
-                <p className="mt-3 font-medium">{item.title}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
+    <Section
+      tag="Statistics"
+      title="Our customers are always happy"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+    venenatis sollicitudin quam ut tincidunt."
+    >
+      <ul className="flex items-center justify-center gap-10 sm:flex-row flex-wrap lg:divide-x">
+        {stats.map((item, idx) => (
+          <li key={idx} className="text-center px-4">
+            <h4 className="text-4xl text-active font-semibold">{item.data}</h4>
+            <p className="font-medium">{item.title}</p>
+          </li>
+        ))}
+      </ul>
+    </Section>
   );
 }
 

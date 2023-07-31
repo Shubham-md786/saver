@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Navbar />
-      <main className="mt-14 lg:my-24">
+      <main className="mt-24 lg:my-24 mx-6">
         <Component {...pageProps} />
       </main>
       <Footer />
