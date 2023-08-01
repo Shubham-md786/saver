@@ -2,8 +2,8 @@ import Image from "next/image";
 
 function Main() {
   return (
-    <section id="main" className="">
-      <div className="container hero  flex flex-col lg:flex-row lg:items-center space-y-6 md:space-y-12">
+    <section id="main" className="lg:mt-32">
+      <div className="container hero flex flex-col lg:flex-row lg:items-center space-y-6 md:space-y-12">
         <div className="hero-content flex-col w-full lg:flex-row lg:w-1/2">
           <div className="max-w-lg lg:order-2">
             <h2 className="font-semibold tracking-wide text-active-dark leading-7 text-center lg:text-left">
